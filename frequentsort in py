@@ -1,0 +1,8 @@
+from collections import Counter
+a=int(input())
+ini_list=list(map(int,input().split()))
+result=[item for item,c in Counter(ini_list).most_common() for item in [item]*c]
+'''for x in result:
+    print (x,end=" ")'''
+    
+print(*result)
