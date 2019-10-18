@@ -1,0 +1,10 @@
+intarr = list(map(str,input().split()))
+
+for i in intarr:         # 12 43 9 267 34 926
+    m=list(i)
+    sum1=0
+    for j in m:  # [1,2]
+        sum1+=int(j)
+    print(sum1,end=" ")
+    
+
