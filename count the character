@@ -1,0 +1,11 @@
+word=input()
+
+wordrev=word[::-1]
+
+print(wordrev)
+count=0
+for l in range(len(word)):
+    if(word[l]==wordrev[l]):
+        count+=1
+
+print(count)
