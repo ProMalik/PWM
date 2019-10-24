@@ -1,0 +1,11 @@
+#problem
+#given an inter of size N and an integer K,return the count of distinct numbers in each windows of size k
+
+
+
+a=list(map(int,input().split()))
+#print(a)
+k=int(input())
+for i in range(len(a)-k+1):
+    #print(a[i:i+k])
+    print(len(set(a[i:i+k])))
