@@ -1,0 +1,62 @@
+// Addition
+#include<stdio.h>
+int Add(int x, int y) 
+{  
+    int c;
+    if (y == 0)
+    {
+        return x;
+    }    
+     else if(x==0)
+    {
+       return y;  
+    }
+    else
+    {
+    while(y!=0)
+    {
+        c=x&y;
+        x=x^y;
+        y=c<<1;
+    }    
+    return x;
+    }
+} 
+int main()
+{
+    int n,m,l;
+    scanf("%d %d",&n,&m);
+   l= Add(n,m);
+    printf("%d",l);
+}
+// Substraction
+#include<stdio.h>
+int Add(int x, int y) 
+{  
+    int c;
+    if (y == 0)
+    {
+        return x;
+    }    
+     else if(x==0)
+    {
+       return y;  
+    }
+    else
+    {
+    while(y!=0)
+    {
+        c=~x&y;
+        x=x^y;
+        y=c<<1;
+    }    
+    return x;
+    }
+} 
+int main()
+{
+    int n,m,l;
+    scanf("%d %d",&n,&m);
+   l= Add(n,m);
+    printf("%d",l);
+}
