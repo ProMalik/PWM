@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+    int number,divisor,quotient=0;
+    scanf("%d %d",&number,&divisor);
+    while(number>=divisor)
+    {
+       number-=divisor;
+        quotient++;
+    }
+    printf("reminder is:%d ",number);
+    printf(" quotient is:%d",quotient);
+    return 0;
+}
