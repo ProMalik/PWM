@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int main()
+{
+    int n,i;
+    printf("Enter number of elements: ");
+    scanf("%d",&n);
+    printf("Enter the elements: ");
+    int a[n];
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    int me=a[n-1]+1,min=0,max=n-1;//me --> maxelement
+    
+    for(i=0;i<n;i++)
+    {
+        if(i%2==0)
+        {
+            a[i]=a[i]+a[max]%me*me;
+            max--;
+        }
+        if(i%2==1)
+        {
+            a[i]=a[i]+a[min]%me*me;
+            min++;
+        }
+    }
+    printf("Alternate Array: ");
+    for(i=0;i<n;i++)
+    {
+        printf("%d ",a[i]/me);// a[i]/me for alternate array
+    }
+    printf("\n");
+    printf("Original Array: ");
+    for(i=0;i<n;i++)
+    {
+        printf("%d ",a[i]%me);//a[i]%me for original array
+    }
+    return 0;
+}
